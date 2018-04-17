@@ -1,5 +1,9 @@
 from math import sqrt,pi,sin,cos
-tt = int(raw_input())
+
+fin = open("D.txt",'r')
+#fout = open("D.out",'w')
+
+tt = int(fin.readline())
 
 _mid = sqrt(2.0)
 
@@ -15,7 +19,7 @@ def findRad(lower,upper,target,func):
 		return findRad(mid,upper,target,func)
 
 for t in xrange(1,tt+1):
-	area = float(raw_input())
+	area = float(fin.readline())
 	print "Case #{0}:".format(t)
 	if area<_mid-0.000001:
 		rad = findRad(0.0,pi/4.0,area,lambda r:cos(r)+sin(r))
@@ -35,4 +39,4 @@ for t in xrange(1,tt+1):
 		rad = findRad(0.0,pi/4.0,area,lambda r:sqrt(2)*cos(r)+sin(r))
 		print "{0} {1} {2}".format(x,x*cos(rad),-x*sin(rad))
 		print "{0} {1} {2}".format(-x,x*cos(rad),-x*sin(rad))
-		print "{0} {1} {2}".format(0,cos(rad)/2.0,sin(rad)/2.0)
+		print "{0} {1} {2}".format(0,sin(rad)/2.0,cos(rad)/2.0)
