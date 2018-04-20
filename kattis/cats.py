@@ -1,3 +1,5 @@
+#TLE on Python solution, accepted on C++ solution. But the idea is totally the same.
+
 class Group:
 	def __init__(self,_id,level=0,parent=None):
 		self.id = _id
