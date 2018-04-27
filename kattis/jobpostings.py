@@ -1,5 +1,3 @@
-#Not accepted yet...
-
 import heapq
 
 def safeInsert(costGraph,capGraph,start,end,cost,capacity):
@@ -40,7 +38,7 @@ def minCostFlow(costGraph,capGraph,start,end,flow):
 		flow -= 1
 		for i in dist:
 			preCum[i] += dist[i]
-		total += preCum[i]
+		total += preCum[end]
 	return total
 
 while True:
