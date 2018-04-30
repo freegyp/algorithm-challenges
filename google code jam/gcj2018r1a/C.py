@@ -7,7 +7,7 @@ def merge(intervals):
 		if len(res)==0 or start>res[-1][1]:
 			res.append([start,end])
 		else:
-			res[-1][1] = end
+			res[-1][1] = max(res[-1][1],end)
 	return res
 
 tt = int(raw_input())
