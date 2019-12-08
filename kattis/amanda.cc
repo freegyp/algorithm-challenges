@@ -1,8 +1,4 @@
-#include<iostream>
-#include<cstdlib>
-#include<vector>
-#include<unordered_map>
-#include<unordered_set>
+#include<bits/stdc++.h>
 using namespace std;
 #define umap unordered_map
 #define uset unordered_set
